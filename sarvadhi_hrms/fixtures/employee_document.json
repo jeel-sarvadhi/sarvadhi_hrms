@@ -1,0 +1,82 @@
+[
+ {
+  "description": "Aadhar Card",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "ID Proof",
+  "modified": "2025-02-11 12:38:05.813765",
+  "name": "ID Proof"
+ },
+ {
+  "description": "Passport",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Identity Verification",
+  "modified": "2025-02-11 12:38:05.970360",
+  "name": "Identity Verification"
+ },
+ {
+  "description": "Updated Resume",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Resume",
+  "modified": "2025-02-11 12:38:05.973835",
+  "name": "Resume"
+ },
+ {
+  "description": "Offer Letter from XYZ Tech Solutions",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Offer Letter",
+  "modified": "2025-02-11 12:38:05.984540",
+  "name": "Offer Letter"
+ },
+ {
+  "description": "Medical Certificate for Health Insurance",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Health Certificate",
+  "modified": "2025-02-11 12:38:05.987084",
+  "name": "Health Certificate"
+ },
+ {
+  "description": "Utility Bill - Electricity",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Address Proof",
+  "modified": "2025-02-11 12:38:05.938849",
+  "name": "Address Proof"
+ },
+ {
+  "description": "Previous Employment Certificate",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Experience",
+  "modified": "2025-02-11 12:38:05.965948",
+  "name": "Experience"
+ },
+ {
+  "description": "Last Year's Income Tax Return",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Tax Filing",
+  "modified": "2025-02-11 12:38:05.976767",
+  "name": "Tax Filing"
+ },
+ {
+  "description": "Completion Certificate for Internship at XYZ Organization",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Internship Certificate",
+  "modified": "2025-02-11 12:38:05.979375",
+  "name": "Internship Certificate"
+ },
+ {
+  "description": "B.Tech Degree Certificate",
+  "docstatus": 0,
+  "doctype": "Employee Document",
+  "document_type": "Academic Certification",
+  "modified": "2025-02-11 12:38:05.981946",
+  "name": "Academic Certification"
+ }
+]
