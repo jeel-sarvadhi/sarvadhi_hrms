@@ -8,6 +8,7 @@
  "field_order": [
   "title",
   "requested_by",
+  "status",
   "details_of_documents_request"
  ],
  "fields": [
@@ -32,11 +33,19 @@
    "fieldtype": "Table",
    "label": "Details of Documents Request",
    "options": "Details of Request"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nApproved\nRejected\nIn Progress",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-11 16:47:28.922350",
+ "modified": "2025-02-11 17:55:37.852376",
  "modified_by": "Administrator",
  "module": "Sarvadhi Hrms",
  "name": "Document Request",
