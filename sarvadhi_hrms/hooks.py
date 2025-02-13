@@ -14,7 +14,8 @@ fixtures = [
     {"dt": "Custom HTML Block", "filters": [], "or_filters":[]},
     {"dt": "Employee Document", "filters": [], "or_filters":[]},
     {"dt": "Employee", "filters": [], "or_filters":[]},
-    {"dt": "Details of Request", "filters": [], "or_filters":[]}
+    {"dt": "Details of Request", "filters": [], "or_filters":[]},
+    {"dt": "Property Setter","filters": [["doc_type", "=", "Timesheet"]]}
     ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
