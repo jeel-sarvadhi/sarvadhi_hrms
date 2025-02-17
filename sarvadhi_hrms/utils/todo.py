@@ -88,7 +88,7 @@ def get_upcoming_birthdayss():
         order_by="date_of_birth asc"
     )
 
-    upcoming_birthdays = []
+    upcoming_birthdayss = []
     today = getdate(nowdate())  # Get today's date
 
     # Loop through the list of employees
@@ -99,7 +99,7 @@ def get_upcoming_birthdayss():
 
             # Check if the birthday is within the next 30 days
             if today <= birth_date <= add_days(today, 30):
-                upcoming_birthdays.append({
+                upcoming_birthdayss.append({
                     "employee_name": emp["employee_name"],
                     "date_of_birth": birth_date.strftime("%d-%b"),
                     "day_name": birth_date.strftime("%A"),
@@ -107,4 +107,4 @@ def get_upcoming_birthdayss():
                     "image": emp["image"] or "/assets/frappe/images/default-avatar.png"  # Default image if none is set
                 })
 
-    return upcoming_birthdays
+    return upcoming_birthdayss

@@ -28,6 +28,14 @@ fixtures = [
 # 	}
 # ]
 
+
+doc_events = {
+    "Timesheet": {
+        "validate": "sarvadhi_hrms.utils.timesheet.validate_timesheet"
+    }
+}
+
+
 # Includes in <head>
 # ------------------
 
@@ -48,6 +56,8 @@ fixtures = [
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+
+page_js = {"page" : "public/js/time.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
