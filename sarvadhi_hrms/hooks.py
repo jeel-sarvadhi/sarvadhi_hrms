@@ -31,9 +31,13 @@ fixtures = [
 
 doc_events = {
     "Timesheet": {
-        "validate": "sarvadhi_hrms.utils.timesheet.validate_timesheet"
+        "validate": "sarvadhi_hrms.utils.task_timesheet.validate_timesheet"
     }
 }
+
+# override_doctype_class = {
+#     "Timesheet": "sarvadhi_hrms.utils.task_timesheet_overrides.CustomTimesheet"
+# }
 
 
 # Includes in <head>
