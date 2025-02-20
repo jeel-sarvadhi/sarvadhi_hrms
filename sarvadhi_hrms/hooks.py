@@ -32,8 +32,18 @@ fixtures = [
 doc_events = {
     "Timesheet": {
         "validate": "sarvadhi_hrms.utils.task_timesheet.validate_timesheet"
-    }
+    },
+
+    "Job Opening": {
+        # "on_update": "sarvadhi_hrms.sarvadhi_hrms.doctype.job_opening_type.job_opening_type.send_approval_request",
+        "on_update": "sarvadhi_hrms.utils.email.send_approval_request",
+    },
+    
+    # "Job Applicant":{
+    #     "on_update": "sarvadhi_hrms.utils.external_api.get_ip_info"
+    # }
 }
+
 
 # override_doctype_class = {
 #     "Timesheet": "sarvadhi_hrms.utils.task_timesheet_overrides.CustomTimesheet"
@@ -60,6 +70,11 @@ doc_events = {
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+# page_js = {
+#         "page" : "public/js/external_api.js"
+#     }
+
+
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
