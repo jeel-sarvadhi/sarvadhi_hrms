@@ -15,7 +15,10 @@ fixtures = [
     {"dt": "Employee Document", "filters": [], "or_filters":[]},
     {"dt": "Employee", "filters": [], "or_filters":[]},
     {"dt": "Details of Request", "filters": [], "or_filters":[]},
-    {"dt": "Property Setter","filters": [["doc_type", "=", "Timesheet"]]}
+    {"dt": "Property Setter","filters": [["doc_type", "=", "Timesheet"]]},
+    # {"dt": "Custom HTML Block", "filters": [
+    #     ["name", "in", ["whether updates", "Updates"]]
+    # ]}
     ]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -39,9 +42,16 @@ doc_events = {
         "on_update": "sarvadhi_hrms.utils.email.send_approval_request",
     },
     
-    # "Job Applicant":{
-    #     "on_update": "sarvadhi_hrms.utils.external_api.get_ip_info"
-    # }
+    "Job Applicant":{
+        "on_update": "sarvadhi_hrms.utils.job_opening.on_update_method"
+    },
+    
+    "Delivery Note":{
+        "on_submit": "sarvadhi_hrms.utils.delivery_note.post_delivery_note"
+    },
+    "ToDo": {
+        "after_insert": "sarvadhi_hrms.utils.qr_code_generate.custom_generate_qr_code",
+    }
 }
 
 
@@ -77,7 +87,7 @@ doc_events = {
 
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Job Applicant" : "public/js/job_applicant.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -182,7 +192,11 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "cron": {
+        "0/1 * * * *": [
+		"sarvadhi_hrms.utils.purchase_api.get_purchase_order"
+	]},
 # 	"all": [
 # 		"sarvadhi_hrms.tasks.all"
 # 	],
@@ -198,7 +212,7 @@ doc_events = {
 # 	"monthly": [
 # 		"sarvadhi_hrms.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

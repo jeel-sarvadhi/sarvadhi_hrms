@@ -2,9 +2,9 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
-# from frappe.core.doctype.communication.email import make
 from frappe.utils import get_url
+# from frappe.model.document import Document
+# from frappe.core.doctype.communication.email import make
 
 
 # class JobOpeningType(Document):
