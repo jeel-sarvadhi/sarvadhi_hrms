@@ -5,7 +5,7 @@ import frappe.utils
 def custom_generate_qr_code(doc, method):
 
     doc_url = frappe.utils.get_url(doc.doctype, doc.name)
-    
+    print(":::::::::::::::::::::",doc_url)
     qr_code_url = f"https://api.dub.co/qr?url={doc_url}"
     
     try:

@@ -10,16 +10,17 @@ app_license = "mit"
 
 # required_apps = []
 fixtures = [
-    {"dt": "Document Request", "filters": [], "or_filters":[]},
-    {"dt": "Custom HTML Block", "filters": [], "or_filters":[]},
-    {"dt": "Employee Document", "filters": [], "or_filters":[]},
-    {"dt": "Employee", "filters": [], "or_filters":[]},
-    {"dt": "Details of Request", "filters": [], "or_filters":[]},
-    {"dt": "Property Setter","filters": [["doc_type", "=", "Timesheet"]]},
+    {"dt": "Document Request", "filters": [], "or_filters": []},
+    {"dt": "Custom HTML Block", "filters": [], "or_filters": []},
+    {"dt": "Employee Document", "filters": [], "or_filters": []},
+    {"dt": "Employee", "filters": [], "or_filters": []},
+    {"dt": "Details of Request", "filters": [], "or_filters": []},
+    {"dt": "Property Setter", "filters": [["doc_type", "=", "Timesheet"]]},
     # {"dt": "Custom HTML Block", "filters": [
     #     ["name", "in", ["whether updates", "Updates"]]
     # ]}
-    ]
+    {'dt':"Print Format","filters": [["doc_type", "=", "Job Offer"]]}
+]
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
@@ -41,12 +42,12 @@ doc_events = {
         # "on_update": "sarvadhi_hrms.sarvadhi_hrms.doctype.job_opening_type.job_opening_type.send_approval_request",
         "on_update": "sarvadhi_hrms.utils.email.send_approval_request",
     },
-    
-    "Job Applicant":{
+
+    "Job Applicant": {
         "on_update": "sarvadhi_hrms.utils.job_opening.on_update_method"
     },
-    
-    "Delivery Note":{
+
+    "Delivery Note": {
         "on_submit": "sarvadhi_hrms.utils.delivery_note.post_delivery_note"
     },
     "ToDo": {
@@ -85,9 +86,9 @@ doc_events = {
 #     }
 
 
-
 # include js in doctype views
-doctype_js = {"Job Applicant" : "public/js/job_applicant.js"}
+doctype_js = {"Job Opening": "public/js/job_opening.js",
+              "Job Offer": "public/js/job_offer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -195,23 +196,23 @@ doctype_js = {"Job Applicant" : "public/js/job_applicant.js"}
 scheduler_events = {
     "cron": {
         "0/1 * * * *": [
-		"sarvadhi_hrms.utils.purchase_api.get_purchase_order"
-	]},
-# 	"all": [
-# 		"sarvadhi_hrms.tasks.all"
-# 	],
-# 	"daily": [
-# 		"sarvadhi_hrms.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"sarvadhi_hrms.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"sarvadhi_hrms.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"sarvadhi_hrms.tasks.monthly"
-# 	],
+            "sarvadhi_hrms.utils.purchase_api.get_purchase_order"
+        ]},
+    # 	"all": [
+    # 		"sarvadhi_hrms.tasks.all"
+    # 	],
+    # 	"daily": [
+    # 		"sarvadhi_hrms.tasks.daily"
+    # 	],
+    # 	"hourly": [
+    # 		"sarvadhi_hrms.tasks.hourly"
+    # 	],
+    # 	"weekly": [
+    # 		"sarvadhi_hrms.tasks.weekly"
+    # 	],
+    # 	"monthly": [
+    # 		"sarvadhi_hrms.tasks.monthly"
+    # 	],
 }
 
 # Testing
@@ -289,4 +290,3 @@ scheduler_events = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
